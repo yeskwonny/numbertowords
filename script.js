@@ -62,7 +62,12 @@ const units = [
 const maxUnitIndex = units.length;
 
 function getUnit(index) {
-  if (index >= maxUnitIndex) return "Extremely Large Number";
+  if (index >= maxUnitIndex) {
+    if (dollarsText === "Extremely Large Number") {
+      numOutput.textContent = dollarsText; // Directly display "Extremely Large Number"
+      return;
+    }
+  }
   return units[index];
 }
 
