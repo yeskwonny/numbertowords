@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Number to Words</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Left Column: Header and Instructions -->
+      <div class="side-by-side-container">
+        <header>
+          <h1>NUMBER TO WORDS</h1>
+          <p class="intro">
+            Quickly convert numbers to English words right in your browser. Just
+            enter any number in the input field, and this tool will instantly
+            turn it into words. <br />
+            <strong>Note:</strong> With the current configuration, this logic
+            supports numbers up to 66 digits.
+          </p>
+        </header>
+
+        <section class="instructions">
+          <h2>HOW TO USE</h2>
+          <ul class="instructionList">
+            <li>
+              <strong>Enter a Number:</strong> Type a number in the input box
+              (e.g., <code>123.45</code>).
+            </li>
+            <li>
+              <strong>Click Convert:</strong> Press "Convert" to change the
+              number into words.
+            </li>
+            <li>
+              <strong>See the Result:</strong> The words will appear, like "One
+              Hundred Twenty-Three Dollars and Forty-Five Cents."
+            </li>
+            <li><strong>Clear Input:</strong> Press "Clear" to reset.</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Right Column: Converter -->
+      <main>
+        <div class="container">
+          <div class="inputContainer">
+            <textarea
+              type="text"
+              id="numberInput"
+              class="numberInput"
+              placeholder="e.g., 123.45"
+              maxlength="66"
+            ></textarea>
+          </div>
+
+          <div class="resultContainer">
+            <textarea
+              type="text"
+              id="result"
+              class="result"
+              placeholder="Result"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="btnContainer">
+          <input type="button" onclick="convertNumber()" value="Convert" />
+          <input type="button" onclick="clearInput()" value="Clear" />
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
